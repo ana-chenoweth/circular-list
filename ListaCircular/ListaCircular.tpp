@@ -65,6 +65,12 @@ void ListaCircular<T>::Retroceder()
     if(EstaVacia()) throw ListaVacia();
     cabeza= cabeza->anterior;
 }
+//***************************************************************************************
+template <typename T>
+int ListaCircular<T>::ObtenerTam() const
+{
+    return tam;
+}
 //**************************************************************************
 template <typename T>
 void ListaCircular<T>::Eliminar()
