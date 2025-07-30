@@ -22,6 +22,8 @@ public:
     void Agregar(T valor);
     void Eliminar();
     bool Buscar(T valor) const;
+    void Avanzar();
+    void Retroceder();
     
     bool EstaVacia() const;
     void Vaciar();

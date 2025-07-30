@@ -51,6 +51,20 @@ void ListaCircular<T>::Agregar(T valor)
     cabeza = nuevo;
     ++tam;
 }
+//************************************************************************
+template <typename T>
+void ListaCircular<T>::Avanzar()
+{
+    if(EstaVacia()) throw ListaVacia();
+    cabeza= cabeza->siguiente;
+}
+//************************************************************************
+template <typename T>
+void ListaCircular<T>::Retroceder()
+{
+    if(EstaVacia()) throw ListaVacia();
+    cabeza= cabeza->anterior;
+}
 //**************************************************************************
 template <typename T>
 void ListaCircular<T>::Eliminar()
