@@ -20,9 +20,18 @@ public:
     ListaCircular<T> &operator=(const ListaCircular<T> &lc);
     ListaCircular<T>(const ListaCircular &lc);
     void Agregar(T valor);
+    
 
     void Vaciar();
 
+  /** \class ListaVacia
+ *  \brief Excepci&oacute;n lanzada cuando se realiza una operaci&oacute;n en una lista vac&iacute;a.
+ */
+  class ListaVacia : public std::exception
+  {
+  public:
+    virtual const char *what() const throw();
+  };
 };
 
 #include "ListaCircular.tpp"
