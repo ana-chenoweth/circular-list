@@ -21,6 +21,7 @@ public:
     ListaCircular<T>(const ListaCircular &lc);
     void Agregar(T valor);
     void Eliminar();
+    bool Buscar(T valor) const;
     
     bool EstaVacia() const;
     void Vaciar();

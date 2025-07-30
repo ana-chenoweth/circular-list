@@ -66,6 +66,19 @@ void ListaCircular<T>::Eliminar()
     delete porBorrar;
     tam--;
 }
+//*******************************************************************************
+template <typename T>
+bool ListaCircular<T>::Buscar(T valor) const
+{
+    Elemento *actual = cabeza;
+    do{
+        if(actual->valor == valor){
+            return true;
+        }
+        actual = actual->siguiente;
+    }while(actual != cabeza);
+    return false;
+}
 //*****************************************************************************************
 template <typename T>
 bool ListaCircular<T>::EstaVacia() const
