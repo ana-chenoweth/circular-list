@@ -21,7 +21,7 @@ public:
     ListaCircular<T>(const ListaCircular &lc);
     void Agregar(T valor);
     
-
+    bool EstaVacia() const;
     void Vaciar();
 
   /** \class ListaVacia

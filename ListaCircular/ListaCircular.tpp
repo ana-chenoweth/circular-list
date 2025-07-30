@@ -51,6 +51,12 @@ void ListaCircular<T>::Agregar(T valor)
     cabeza = nuevo;
     ++tam;
 }
+//*****************************************************************************************
+template <typename T>
+bool ListaCircular<T>::EstaVacia() const
+{
+    return tam==0;
+}
 //****************************************************************************************************************
 template <typename T>
 const char *ListaCircular<T>::ListaVacia::what() const throw() {
