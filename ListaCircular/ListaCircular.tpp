@@ -20,6 +20,12 @@ ListaCircular<T> &ListaCircular<T>::operator=(const ListaCircular<T> &Otralista)
     }
     return *this;
 }
+//**************************************************************************
+template <typename T>
+ListaCircular<T>::ListaCircular(const ListaCircular<T> &lc) : tam(0), cabeza(nullptr)
+{
+    *this = lc;
+}
 //***************************************************************************************
 template <typename T>
 void ListaCircular<T>::Vaciar()

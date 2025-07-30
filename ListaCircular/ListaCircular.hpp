@@ -17,6 +17,10 @@ private:
 public:
     ListaCircular();
     ~ListaCircular();
+    ListaCircular<T> &operator=(const ListaCircular<T> &lc);
+    ListaCircular<T>(const ListaCircular &lc);
+
+    void Vaciar();
 
 };
 
