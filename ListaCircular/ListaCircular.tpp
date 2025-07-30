@@ -51,3 +51,13 @@ void ListaCircular<T>::Agregar(T valor)
     cabeza = nuevo;
     ++tam;
 }
+//****************************************************************************************************************
+template <typename T>
+const char *ListaCircular<T>::ListaVacia::what() const throw() {
+  return "Lista vacia";
+}
+//****************************************************************************************************************
+template <typename T>
+const char *ListaCircular<T>::FueraRango::what() const throw() {
+  return "Fuera de rango";
+}

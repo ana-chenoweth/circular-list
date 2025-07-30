@@ -32,6 +32,16 @@ public:
   public:
     virtual const char *what() const throw();
   };
+
+  /** \class FueraRango
+ *  \brief Excepci&oacute;n lanzada cuando se intenta acceder a una posici&oacute;n fuera del rango de la lista.
+ */
+  class FueraRango : public std::exception
+  {
+  public:
+    virtual const char *what() const throw();
+  };
+  
 };
 
 #include "ListaCircular.tpp"
