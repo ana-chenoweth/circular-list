@@ -24,7 +24,8 @@ public:
     bool Buscar(T valor) const;
     void Avanzar();
     void Retroceder();
-    
+    int ObtenerTam() const;
+    T Cabeza() const;
     bool EstaVacia() const;
     void Vaciar();
 

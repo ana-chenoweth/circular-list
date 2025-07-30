@@ -71,6 +71,12 @@ int ListaCircular<T>::ObtenerTam() const
 {
     return tam;
 }
+//****************************************************************************************
+template <typename T>
+T ListaCircular<T>::Cabeza() const
+{
+    return cabeza->valor;
+}
 //**************************************************************************
 template <typename T>
 void ListaCircular<T>::Eliminar()
