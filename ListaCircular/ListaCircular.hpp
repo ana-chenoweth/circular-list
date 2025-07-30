@@ -16,6 +16,7 @@ private:
 
 public:
     ListaCircular();
+    ~ListaCircular();
 
 };
 
