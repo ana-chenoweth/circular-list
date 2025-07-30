@@ -19,6 +19,7 @@ public:
     ~ListaCircular();
     ListaCircular<T> &operator=(const ListaCircular<T> &lc);
     ListaCircular<T>(const ListaCircular &lc);
+    void Agregar(T valor);
 
     void Vaciar();
 

@@ -34,3 +34,20 @@ void ListaCircular<T>::Vaciar()
         Eliminar();
     }
 }
+//**********************************************************************************************
+template <typename T>
+void ListaCircular<T>::Agregar(T valor)
+{
+    Elemento* nuevo;
+    if(EstaVacia()){
+        nuevo = new Elemento(valor);
+        nuevo->siguiente = nuevo;
+        nuevo->anterior = nuevo;
+    }else{
+        nuevo = new Elemento(valor, cabeza, cabeza->anterior);
+        cabeza->anterior->siguiente = nuevo;
+        cabeza->anterior = nuevo;
+    }
+    cabeza = nuevo;
+    ++tam;
+}
