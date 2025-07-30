@@ -51,6 +51,21 @@ void ListaCircular<T>::Agregar(T valor)
     cabeza = nuevo;
     ++tam;
 }
+//**************************************************************************
+template <typename T>
+void ListaCircular<T>::Eliminar()
+{
+    if(EstaVacia()) throw ListaVacia();
+    Elemento* porBorrar = cabeza;
+    if(tam==1) cabeza = nullptr;
+    else{
+        porBorrar->anterior->siguiente = porBorrar->siguiente;
+        porBorrar -> siguiente -> anterior = porBorrar -> anterior;
+        cabeza = cabeza->siguiente;
+    }
+    delete porBorrar;
+    tam--;
+}
 //*****************************************************************************************
 template <typename T>
 bool ListaCircular<T>::EstaVacia() const

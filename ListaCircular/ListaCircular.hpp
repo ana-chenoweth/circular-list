@@ -20,6 +20,7 @@ public:
     ListaCircular<T> &operator=(const ListaCircular<T> &lc);
     ListaCircular<T>(const ListaCircular &lc);
     void Agregar(T valor);
+    void Eliminar();
     
     bool EstaVacia() const;
     void Vaciar();
