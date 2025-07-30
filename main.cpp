@@ -13,7 +13,7 @@ string nombreAleatorio() {
 
 int main() {
     srand(time(NULL));
-    // Crear un c�rculo de personas con valores del 1 al 5
+    // Crear un circulo de personas con valores del 1 al 5
     ListaCircular<string> josephusCirculo;
     cout << "**********************************************************\n"
     << "               CIRCULO DE JOSEPH                                        \n"
@@ -46,19 +46,19 @@ int main() {
     josephusCirculo.ImprimirAdelante();
     cout << endl;
 
-    // Iterar hasta que solo quede una persona en el c�rculo
+    // Iterar hasta que solo quede una persona en el circulo
     while (josephusCirculo.ObtenerTam() > 1) {
-        // Avanzar k posiciones en el c�rculo
+        // Avanzar k posiciones en el circulo
         for (int i = 1; i < k; ++i) {
             josephusCirculo.Avanzar();
         }
 
         // Eliminar la k-esima persona e imprimir el paso
-        string eliminado = josephusCirculo.Cabeza(); // La persona que ser� eliminada
-        josephusCirculo.Eliminar(); // Eliminar la k-�sima persona
+        string eliminado = josephusCirculo.Cabeza(); // La persona que sera eliminada
+        josephusCirculo.Eliminar(); // Eliminar la k-esima persona
         cout << "Eliminado a: " << eliminado << endl << endl;
 
-        // Imprimir el estado actual del c�rculo
+        // Imprimir el estado actual del circulo
         cout << "Circulo: ";
         josephusCirculo.ImprimirAdelante();
         cout << endl;
