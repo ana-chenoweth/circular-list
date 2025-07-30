@@ -143,3 +143,23 @@ template <typename T>
 const char *ListaCircular<T>::FueraRango::what() const throw() {
   return "Fuera de rango";
 }
+//*********************************************************************************************************************
+template <typename T>
+T ListaCircular<T>::Josephus(int k) {
+    if (EstaVacia()) {
+        throw ListaVacia();
+    }
+    while (tam > 1) {
+        for (int i = 0; i < k - 1; ++i) {
+            Avanzar(); // Avanzamos k - 1 veces
+        }
+        Elemento* eliminado = cabeza;
+        cabeza = cabeza->siguiente; // Actualizamos la cabeza para evitar eliminarla
+        Eliminar(); // Eliminamos la k-�sima persona
+        delete eliminado; // Liberamos la memoria del nodo eliminado
+    }
+
+    T sobreviviente = cabeza->valor; // Obtenemos el valor del sobreviviente
+    cabeza = nullptr; // Reiniciamos la cabeza para evitar errores futuros
+    return sobreviviente;
+}

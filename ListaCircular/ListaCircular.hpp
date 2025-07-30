@@ -30,6 +30,7 @@ public:
     void Vaciar();
     void ImprimirAdelante() const;
     void ImprimirAtras() const;
+    T Josephus(int k);
 
   /** \class ListaVacia
  *  \brief Excepci&oacute;n lanzada cuando se realiza una operaci&oacute;n en una lista vac&iacute;a.
