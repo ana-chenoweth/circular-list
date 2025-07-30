@@ -20,3 +20,11 @@ ListaCircular<T> &ListaCircular<T>::operator=(const ListaCircular<T> &Otralista)
     }
     return *this;
 }
+//***************************************************************************************
+template <typename T>
+void ListaCircular<T>::Vaciar()
+{
+    while(!EstaVacia()){
+        Eliminar();
+    }
+}
