@@ -41,5 +41,31 @@ int main() {
     for (int i = 1; i <= n; ++i) {
         josephusCirculo.Agregar(nombreAleatorio());
     }
+
+    cout << "Circulo: ";
+    josephusCirculo.ImprimirAdelante();
+    cout << endl;
+
+    // Iterar hasta que solo quede una persona en el c�rculo
+    while (josephusCirculo.ObtenerTam() > 1) {
+        // Avanzar k posiciones en el c�rculo
+        for (int i = 1; i < k; ++i) {
+            josephusCirculo.Avanzar();
+        }
+
+        // Eliminar la k-esima persona e imprimir el paso
+        string eliminado = josephusCirculo.Cabeza(); // La persona que ser� eliminada
+        josephusCirculo.Eliminar(); // Eliminar la k-�sima persona
+        cout << "Eliminado a: " << eliminado << endl << endl;
+
+        // Imprimir el estado actual del c�rculo
+        cout << "Circulo: ";
+        josephusCirculo.ImprimirAdelante();
+        cout << endl;
+    }
+
+    // Al finalizar, imprimir la persona que sobrevive
+    cout << "La persona sobreviviente es: " << josephusCirculo.Cabeza() << endl;
+
     return 0;
 }
