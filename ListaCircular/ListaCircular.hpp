@@ -28,6 +28,8 @@ public:
     T Cabeza() const;
     bool EstaVacia() const;
     void Vaciar();
+    void ImprimirAdelante() const;
+    void ImprimirAtras() const;
 
   /** \class ListaVacia
  *  \brief Excepci&oacute;n lanzada cuando se realiza una operaci&oacute;n en una lista vac&iacute;a.

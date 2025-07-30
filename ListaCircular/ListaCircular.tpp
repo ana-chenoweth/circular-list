@@ -111,6 +111,28 @@ bool ListaCircular<T>::EstaVacia() const
 {
     return tam==0;
 }
+//**********************************************************************************************
+template <typename T>
+void ListaCircular<T>::ImprimirAdelante() const
+{
+    Elemento *actual = cabeza;
+    do{
+        std::cout << actual->valor << ", ";
+        actual = actual->siguiente;
+
+    }while(actual != cabeza);
+    std::cout << "\b\b\b";
+}
+//**********************************************************************************************
+template <typename T>
+void ListaCircular<T>::ImprimirAtras() const
+{
+    Elemento *actual = cabeza;
+    do{
+        std::cout << actual->valor << ", ";
+        actual = actual->anterior;
+    }while(actual != cabeza);
+}
 //****************************************************************************************************************
 template <typename T>
 const char *ListaCircular<T>::ListaVacia::what() const throw() {
