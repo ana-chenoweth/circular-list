@@ -5,7 +5,7 @@ This project implements a **doubly-linked circular list** in C++. It was develop
 A circular list is a type of list where the last element points back to the first, forming a continuous loop. This version supports both forward and backward traversal.
 
 ---
-
+This is an example of how to use the CircularList class, with the problem of the **Josephus** .
 <img src="img/example-use.gif" width="800px" />
 
 ## Results
